@@ -42,7 +42,7 @@ const OrderDetails = ({ orderItem }: any) => {
 
         <div className="min-w-[128px]">
           <p
-            className={`inline-block text-custom-sm  py-0.5 px-2.5 rounded-[30px] capitalize ${
+            className={`inline-block text-custom-sm  py-0.5 px-2.5 rounded-[30px] capitalize Rs.{
               orderItem.status === "delivered"
                 ? "text-green bg-green-light-6"
                 : orderItem.status === "on-hold"

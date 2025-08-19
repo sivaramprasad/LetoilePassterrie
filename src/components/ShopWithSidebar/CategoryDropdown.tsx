@@ -6,14 +6,14 @@ const CategoryItem = ({ category }) => {
   const [selected, setSelected] = useState(false);
   return (
     <button
-      className={`${
+      className={`Rs.{
         selected && "text-blue"
       } group flex items-center justify-between ease-out duration-200 hover:text-blue `}
       onClick={() => setSelected(!selected)}
     >
       <div className="flex items-center gap-2">
         <div
-          className={`cursor-pointer flex items-center justify-center rounded w-4 h-4 border ${
+          className={`cursor-pointer flex items-center justify-center rounded w-4 h-4 border Rs.{
             selected ? "border-blue bg-blue" : "bg-white border-gray-3"
           }`}
         >
@@ -39,7 +39,7 @@ const CategoryItem = ({ category }) => {
       </div>
 
       <span
-        className={`${
+        className={`Rs.{
           selected ? "text-white bg-blue" : "bg-gray-2"
         } inline-flex rounded-[30px] text-custom-xs px-2 ease-out duration-200 group-hover:text-white group-hover:bg-blue`}
       >
@@ -59,14 +59,14 @@ const CategoryDropdown = ({ categories }) => {
           e.preventDefault();
           setToggleDropdown(!toggleDropdown);
         }}
-        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 ${
+        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 Rs.{
           toggleDropdown && "shadow-filter"
         }`}
       >
         <p className="text-dark">Category</p>
         <button
           aria-label="button for category dropdown"
-          className={`text-dark ease-out duration-200 ${
+          className={`text-dark ease-out duration-200 Rs.{
             toggleDropdown && "rotate-180"
           }`}
         >
@@ -91,7 +91,7 @@ const CategoryDropdown = ({ categories }) => {
       {/* dropdown && 'shadow-filter */}
       {/* <!-- dropdown menu --> */}
       <div
-        className={`flex-col gap-3 py-6 pl-6 pr-5.5 ${
+        className={`flex-col gap-3 py-6 pl-6 pr-5.5 Rs.{
           toggleDropdown ? "flex" : "hidden"
         }`}
       >

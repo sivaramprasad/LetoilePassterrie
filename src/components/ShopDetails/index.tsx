@@ -144,7 +144,7 @@ const ShopDetails = () => {
                       <button
                         onClick={() => setPreviewImg(key)}
                         key={key}
-                        className={`flex items-center justify-center w-15 sm:w-25 h-15 sm:h-25 overflow-hidden rounded-lg bg-gray-2 shadow-1 ease-out duration-200 border-2 hover:border-blue ${
+                        className={`flex items-center justify-center w-15 sm:w-25 h-15 sm:h-25 overflow-hidden rounded-lg bg-gray-2 shadow-1 ease-out duration-200 border-2 hover:border-blue Rs.{
                           key === previewImg
                             ? "border-blue"
                             : "border-transparent"
@@ -317,11 +317,11 @@ const ShopDetails = () => {
 
                   <h3 className="font-medium text-custom-1 mb-4.5">
                     <span className="text-sm sm:text-base text-dark">
-                      Price: ${product.price}
+                      Price: Rs.{product.price}
                     </span>
                     <span className="line-through">
                       {" "}
-                      ${product.discountedPrice}{" "}
+                      Rs.{product.discountedPrice}{" "}
                     </span>
                   </h3>
 
@@ -395,14 +395,14 @@ const ShopDetails = () => {
                                   onChange={() => setActiveColor(color)}
                                 />
                                 <div
-                                  className={`flex items-center justify-center w-5.5 h-5.5 rounded-full ${
+                                  className={`flex items-center justify-center w-5.5 h-5.5 rounded-full Rs.{
                                     activeColor === color && "border"
                                   }`}
-                                  style={{ borderColor: `${color}` }}
+                                  style={{ borderColor: `Rs.{color}` }}
                                 >
                                   <span
                                     className="block w-3 h-3 rounded-full"
-                                    style={{ backgroundColor: `${color}` }}
+                                    style={{ backgroundColor: `Rs.{color}` }}
                                   ></span>
                                 </div>
                               </div>
@@ -435,7 +435,7 @@ const ShopDetails = () => {
 
                                 {/*  */}
                                 <div
-                                  className={`mr-2 flex h-4 w-4 items-center justify-center rounded border ${
+                                  className={`mr-2 flex h-4 w-4 items-center justify-center rounded border Rs.{
                                     storage === item.id
                                       ? "border-blue bg-blue"
                                       : "border-gray-4"
@@ -503,7 +503,7 @@ const ShopDetails = () => {
 
                                 {/*  */}
                                 <div
-                                  className={`mr-2 flex h-4 w-4 items-center justify-center rounded border ${
+                                  className={`mr-2 flex h-4 w-4 items-center justify-center rounded border Rs.{
                                     type === item.id
                                       ? "border-blue bg-blue"
                                       : "border-gray-4"
@@ -571,7 +571,7 @@ const ShopDetails = () => {
 
                                 {/*  */}
                                 <div
-                                  className={`mr-2 flex h-4 w-4 items-center justify-center rounded border ${
+                                  className={`mr-2 flex h-4 w-4 items-center justify-center rounded border Rs.{
                                     sim === item.id
                                       ? "border-blue bg-blue"
                                       : "border-gray-4"
@@ -711,7 +711,7 @@ const ShopDetails = () => {
                   <button
                     key={key}
                     onClick={() => setActiveTab(item.id)}
-                    className={`font-medium lg:text-lg ease-out duration-200 hover:text-blue relative before:h-0.5 before:bg-blue before:absolute before:left-0 before:bottom-0 before:ease-out before:duration-200 hover:before:w-full ${
+                    className={`font-medium lg:text-lg ease-out duration-200 hover:text-blue relative before:h-0.5 before:bg-blue before:absolute before:left-0 before:bottom-0 before:ease-out before:duration-200 hover:before:w-full Rs.{
                       activeTab === item.id
                         ? "text-blue before:w-full"
                         : "text-dark before:w-0"
@@ -727,7 +727,7 @@ const ShopDetails = () => {
               {/* <!-- tab content one start --> */}
               <div>
                 <div
-                  className={`flex-col sm:flex-row gap-7.5 xl:gap-12.5 mt-12.5 ${
+                  className={`flex-col sm:flex-row gap-7.5 xl:gap-12.5 mt-12.5 Rs.{
                     activeTab === "tabOne" ? "flex" : "hidden"
                   }`}
                 >
@@ -780,7 +780,7 @@ const ShopDetails = () => {
               {/* <!-- tab content two start --> */}
               <div>
                 <div
-                  className={`rounded-xl bg-white shadow-1 p-4 sm:p-6 mt-10 ${
+                  className={`rounded-xl bg-white shadow-1 p-4 sm:p-6 mt-10 Rs.{
                     activeTab === "tabTwo" ? "block" : "hidden"
                   }`}
                 >
@@ -923,7 +923,7 @@ const ShopDetails = () => {
               {/* <!-- tab content three start --> */}
               <div>
                 <div
-                  className={`flex-col sm:flex-row gap-7.5 xl:gap-12.5 mt-12.5 ${
+                  className={`flex-col sm:flex-row gap-7.5 xl:gap-12.5 mt-12.5 Rs.{
                     activeTab === "tabThree" ? "flex" : "hidden"
                   }`}
                 >

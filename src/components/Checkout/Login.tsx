@@ -7,7 +7,7 @@ const Login = () => {
     <div className="bg-white shadow-1 rounded-[10px]">
       <div
         onClick={() => setDropdown(!dropdown)}
-        className={`cursor-pointer flex items-center gap-0.5 py-5 px-5.5 ${
+        className={`cursor-pointer flex items-center gap-0.5 py-5 px-5.5 Rs.{
           dropdown && "border-b border-gray-3"
         }`}
       >
@@ -15,7 +15,7 @@ const Login = () => {
         <span className="flex items-center gap-2.5 pl-1 font-medium text-dark">
           Click here to login
           <svg
-            className={`${
+            className={`Rs.{
               dropdown && "rotate-180"
             } fill-current ease-out duration-200`}
             width="22"
@@ -36,7 +36,7 @@ const Login = () => {
 
       {/* <!-- dropdown menu --> */}
       <div
-        className={`${
+        className={`Rs.{
           dropdown ? "block" : "hidden"
         } pt-7.5 pb-8.5 px-4 sm:px-8.5`}
       >

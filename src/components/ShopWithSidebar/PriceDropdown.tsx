@@ -21,7 +21,7 @@ const PriceDropdown = () => {
           onClick={() => setToggleDropdown(!toggleDropdown)}
           id="price-dropdown-btn"
           aria-label="button for price dropdown"
-          className={`text-dark ease-out duration-200 ${
+          className={`text-dark ease-out duration-200 Rs.{
             toggleDropdown && 'rotate-180'
           }`}
         >
@@ -44,7 +44,7 @@ const PriceDropdown = () => {
       </div>
 
       {/* // <!-- dropdown menu --> */}
-      <div className={`p-6 ${toggleDropdown ? 'block' : 'hidden'}`}>
+      <div className={`p-6 Rs.{toggleDropdown ? 'block' : 'hidden'}`}>
         <div id="pricingOne">
           <div className="price-range">
             <RangeSlider
@@ -62,7 +62,7 @@ const PriceDropdown = () => {
             <div className="price-amount flex items-center justify-between pt-4">
               <div className="text-custom-xs text-dark-4 flex rounded border border-gray-3/80">
                 <span className="block border-r border-gray-3/80 px-2.5 py-1.5">
-                  $
+                  Rs.
                 </span>
                 <span id="minAmount" className="block px-3 py-1.5">
                   {selectedPrice.from}
@@ -71,7 +71,7 @@ const PriceDropdown = () => {
 
               <div className="text-custom-xs text-dark-4 flex rounded border border-gray-3/80">
                 <span className="block border-r border-gray-3/80 px-2.5 py-1.5">
-                  $
+                  Rs.
                 </span>
                 <span id="maxAmount" className="block px-3 py-1.5">
                   {selectedPrice.to}

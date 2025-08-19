@@ -45,7 +45,7 @@ const ShopWithoutSidebar = () => {
                     <button
                       onClick={() => setProductStyle("grid")}
                       aria-label="button for product grid tab"
-                      className={`${
+                      className={`Rs.{
                         productStyle === "grid"
                           ? "bg-blue border-blue text-white"
                           : "text-dark bg-gray-1 border-gray-3"
@@ -89,7 +89,7 @@ const ShopWithoutSidebar = () => {
                     <button
                       onClick={() => setProductStyle("list")}
                       aria-label="button for product list tab"
-                      className={`${
+                      className={`Rs.{
                         productStyle === "list"
                           ? "bg-blue border-blue text-white"
                           : "text-dark bg-gray-1 border-gray-3"
@@ -123,7 +123,7 @@ const ShopWithoutSidebar = () => {
 
               {/* <!-- Products Grid Tab Content Start --> */}
               <div
-                className={`${
+                className={`Rs.{
                   productStyle === "grid"
                     ? "grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-x-7.5 gap-y-9"
                     : "flex flex-col gap-7.5"

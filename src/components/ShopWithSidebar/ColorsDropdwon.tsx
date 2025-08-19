@@ -11,14 +11,14 @@ const ColorsDropdwon = () => {
     <div className="bg-white shadow-1 rounded-lg">
       <div
         onClick={() => setToggleDropdown(!toggleDropdown)}
-        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 ${
+        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 Rs.{
           toggleDropdown && "shadow-filter"
         }`}
       >
         <p className="text-dark">Colors</p>
         <button
           aria-label="button for colors dropdown"
-          className={`text-dark ease-out duration-200 ${
+          className={`text-dark ease-out duration-200 Rs.{
             toggleDropdown && "rotate-180"
           }`}
         >
@@ -42,7 +42,7 @@ const ColorsDropdwon = () => {
 
       {/* <!-- dropdown menu --> */}
       <div
-        className={`flex-wrap gap-2.5 p-6 ${
+        className={`flex-wrap gap-2.5 p-6 Rs.{
           toggleDropdown ? "flex" : "hidden"
         }`}
       >
@@ -61,14 +61,14 @@ const ColorsDropdwon = () => {
                 onChange={() => setActiveColor(color)}
               />
               <div
-                className={`flex items-center justify-center w-5.5 h-5.5 rounded-full ${
+                className={`flex items-center justify-center w-5.5 h-5.5 rounded-full Rs.{
                   activeColor === color && "border"
                 }`}
-                style={{ borderColor: `${color}` }}
+                style={{ borderColor: `Rs.{color}` }}
               >
                 <span
                   className="block w-3 h-3 rounded-full"
-                  style={{ backgroundColor: `${color}` }}
+                  style={{ backgroundColor: `Rs.{color}` }}
                 ></span>
               </div>
             </div>

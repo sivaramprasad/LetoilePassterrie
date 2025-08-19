@@ -24,7 +24,7 @@ const PaymentMethod = () => {
                 onChange={() => setPayment("bank")}
               />
               <div
-                className={`flex h-4 w-4 items-center justify-center rounded-full ${
+                className={`flex h-4 w-4 items-center justify-center rounded-full Rs.{
                   payment === "bank"
                     ? "border-4 border-blue"
                     : "border border-gray-4"
@@ -33,7 +33,7 @@ const PaymentMethod = () => {
             </div>
 
             <div
-              className={`rounded-md border-[0.5px] py-3.5 px-5 ease-out duration-200 hover:bg-gray-2 hover:border-transparent hover:shadow-none ${
+              className={`rounded-md border-[0.5px] py-3.5 px-5 ease-out duration-200 hover:bg-gray-2 hover:border-transparent hover:shadow-none Rs.{
                 payment === "bank"
                   ? "border-transparent bg-gray-2"
                   : " border-gray-4 shadow-1"
@@ -64,7 +64,7 @@ const PaymentMethod = () => {
                 onChange={() => setPayment("cash")}
               />
               <div
-                className={`flex h-4 w-4 items-center justify-center rounded-full ${
+                className={`flex h-4 w-4 items-center justify-center rounded-full Rs.{
                   payment === "cash"
                     ? "border-4 border-blue"
                     : "border border-gray-4"
@@ -73,7 +73,7 @@ const PaymentMethod = () => {
             </div>
 
             <div
-              className={`rounded-md border-[0.5px] py-3.5 px-5 ease-out duration-200 hover:bg-gray-2 hover:border-transparent hover:shadow-none min-w-[240px] ${
+              className={`rounded-md border-[0.5px] py-3.5 px-5 ease-out duration-200 hover:bg-gray-2 hover:border-transparent hover:shadow-none min-w-[240px] Rs.{
                 payment === "cash"
                   ? "border-transparent bg-gray-2"
                   : " border-gray-4 shadow-1"
@@ -104,7 +104,7 @@ const PaymentMethod = () => {
                 onChange={() => setPayment("paypal")}
               />
               <div
-                className={`flex h-4 w-4 items-center justify-center rounded-full ${
+                className={`flex h-4 w-4 items-center justify-center rounded-full Rs.{
                   payment === "paypal"
                     ? "border-4 border-blue"
                     : "border border-gray-4"
@@ -112,7 +112,7 @@ const PaymentMethod = () => {
               ></div>
             </div>
             <div
-              className={`rounded-md border-[0.5px] py-3.5 px-5 ease-out duration-200 hover:bg-gray-2 hover:border-transparent hover:shadow-none min-w-[240px] ${
+              className={`rounded-md border-[0.5px] py-3.5 px-5 ease-out duration-200 hover:bg-gray-2 hover:border-transparent hover:shadow-none min-w-[240px] Rs.{
                 payment === "paypal"
                   ? "border-transparent bg-gray-2"
                   : " border-gray-4 shadow-1"

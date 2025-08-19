@@ -6,9 +6,9 @@ import shopData from "@/components/Shop/shopData";
 
 const NewArrival = () => {
   return (
-    <section className="overflow-hidden pt-15">
-      <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
-        {/* <!-- section title --> */}
+    <section className="overflow-hidden">
+      {/* <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
+       
         <div className="mb-7 flex items-center justify-between">
           <div>
             <span className="flex items-center gap-2.5 font-medium text-dark mb-1.5">
@@ -47,12 +47,12 @@ const NewArrival = () => {
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-7.5 gap-y-9">
-          {/* <!-- New Arrivals item --> */}
+        
           {shopData.map((item, key) => (
             <ProductItem item={item} key={key} />
           ))}
         </div>
-      </div>
+      </div> */}
     </section>
   );
 };

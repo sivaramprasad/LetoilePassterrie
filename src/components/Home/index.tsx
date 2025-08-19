@@ -5,6 +5,8 @@ import NewArrival from "./NewArrivals";
 import PromoBanner from "./PromoBanner";
 import BestSeller from "./BestSeller";
 import CounDown from "./Countdown";
+import Gallery from "./SliderGallery";
+import Gallerys from "./SliderGallery2"
 import Testimonials from "./Testimonials";
 import Newsletter from "../Common/Newsletter";
 
@@ -12,13 +14,15 @@ const Home = () => {
   return (
     <main>
       <Hero />
-      <Categories />
-      <NewArrival />
-      <PromoBanner />
       <BestSeller />
+      <PromoBanner />
+       <NewArrival />
+       <Categories />    
       <CounDown />
-      <Testimonials />
-      <Newsletter />
+      <Gallery/>
+      <Gallerys/>
+      {/* <Testimonials />
+      <Newsletter /> */}
     </main>
   );
 };
