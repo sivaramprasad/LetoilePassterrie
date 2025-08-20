@@ -51,7 +51,7 @@ const ProductItem = ({ item }: { item: Product }) => {
         <Image src={item.imgs.previews[0]} alt="" width={250} height={250} />
 
         <div className="absolute left-0 bottom-0 translate-y-full w-full flex items-center justify-center gap-2.5 pb-5 ease-linear duration-200 group-hover:translate-y-0">
-          <button
+          {/* <button
             onClick={() => {
               openModal();
               handleQuickViewUpdate();
@@ -111,7 +111,7 @@ const ProductItem = ({ item }: { item: Product }) => {
                 fill=""
               />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
 

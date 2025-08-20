@@ -207,16 +207,8 @@ const Footer = () => {
             </h2>
 
             <ul className="flex flex-col gap-3.5">
-              <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
-                  cakes
-                </a>
-              </li>
-              <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
-                  Login / Register
-                </a>
-              </li>
+             
+             
               <li>
                 <a className="ease-out duration-200 hover:text-blue" href="#">
                   Cart
@@ -239,25 +231,21 @@ const Footer = () => {
             <ul className="flex flex-col gap-3">
               <li>
                 <a className="ease-out duration-200 hover:text-blue" href="#">
-                  Privacy Policy
+                 Cakes
                 </a>
               </li>
               <li>
                 <a className="ease-out duration-200 hover:text-blue" href="#">
-                  Refund Policy
+                  Gifting
                 </a>
               </li>
               <li>
                 <a className="ease-out duration-200 hover:text-blue" href="#">
-                  Terms of Use
+                  Menu
                 </a>
               </li>
             
-              <li>
-                <a className="ease-out duration-200 hover:text-blue" href="#">
-                  Contact
-                </a>
-              </li>
+              
             </ul>
           </div>
 

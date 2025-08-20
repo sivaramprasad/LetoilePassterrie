@@ -15,41 +15,41 @@ const SingleItem = ({ item }: { item: Product }) => {
   const dispatch = useDispatch<AppDispatch>();
 
   // update the QuickView state
-  const handleQuickViewUpdate = () => {
-    dispatch(updateQuickView({ ...item }));
-  };
+  // const handleQuickViewUpdate = () => {
+  //   dispatch(updateQuickView({ ...item }));
+  // };
 
   // add to cart
-  const handleAddToCart = () => {
-    dispatch(
-      addItemToCart({
-        ...item,
-        quantity: 1,
-      })
-    );
-  };
+  // const handleAddToCart = () => {
+  //   dispatch(
+  //     addItemToCart({
+  //       ...item,
+  //       quantity: 1,
+  //     })
+  //   );
+  // };
 
-  const handleItemToWishList = () => {
-    dispatch(
-      addItemToWishlist({
-        ...item,
-        status: "available",
-        quantity: 1,
-      })
-    );
-  };
+  // const handleItemToWishList = () => {
+  //   dispatch(
+  //     addItemToWishlist({
+  //       ...item,
+  //       status: "available",
+  //       quantity: 1,
+  //     })
+  //   );
+  // };
 
   return (
     <div className="group">
       <div className="relative overflow-hidden rounded-lg  min-h-[403px]">
         
         <div className="flex justify-center items-center imgh">
-          <Image src={item.imgs.previews[0]} alt="" width={400} height={400} />
+          <Image src={item.imgs.previews[0]} alt={item.title} width={400} height={400} />
         </div>
 <div className="text-center px-4 py-7.5">
         
           <h3 className="font-medium ease-out duration-200 hover:text-blue mb-1.5">
-            <Link href="/shop-details"> {item.title} </Link>
+            <Link href="/"> {item.title} </Link>
           </h3>
 
           <span className="flex items-center justify-center gap-2 font-medium text-lg">
@@ -59,7 +59,7 @@ const SingleItem = ({ item }: { item: Product }) => {
         </div>
 
         <div className="absolute right-0 bottom-0 translate-x-full u-w-full flex flex-col gap-2 p-5.5 ease-linear duration-300 group-hover:translate-x-0">
-          <button
+          {/* <button
             onClick={() => {
               handleQuickViewUpdate();
               openModal();
@@ -149,7 +149,7 @@ const SingleItem = ({ item }: { item: Product }) => {
                 fill=""
               />
             </svg>
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

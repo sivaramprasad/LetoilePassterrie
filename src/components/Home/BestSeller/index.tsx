@@ -12,7 +12,7 @@ const BestSeller = () => {
         <div className="mb-10 flex items-center justify-center">
           <div>
            
-            <h2 className="font-semibold text-xl xl:text-heading-5 text-dark">
+            <h2 className="font-semibold text-xl xl:text-heading-5 text-dark fn-text">
              Our Cakes
             </h2>
           </div>

@@ -6,7 +6,7 @@ const PromoBanner = () => {
     <section className="overflow-hidden py-20">
       <div className="max-w-[1170px] w-full mx-auto px-4 sm:px-8 xl:px-0">
          <div className="w-full">
-           <h2 className="font-bold text-xl lg:text-heading-4 text-dark mb-2.5 justify-center">
+           <h2 className="font-bold text-xl lg:text-heading-4 text-dark mb-2.5 justify-center fn-text">
                 Made For You
               </h2>
             
@@ -71,7 +71,7 @@ Gifting  </h2>
                 Who We Are
               </h2>
 
-            <p>
+            <p className="mb-m">
              Lorem Ipsum proin gravida nibh vel velit auctor aliquetenean sollicitudin, lorem qui bibendum auctor Ipsum.
 Lorem Ipsum proin gravida nibh vel velit auctor aliquetenean sollicitudin, lorem qui bibendum auctor Ipsum.
 Lorem Ipsum proin gravida nibh vel velit auctor aliquetenean sollicitudin, lorem qui bibendum auctor Ipsum.
@@ -79,16 +79,16 @@ Lorem Ipsum proin gravida nibh vel velit auctor aliquetenean sollicitudin, lorem
 
 
             </p>
-
-          </div>
-
-          <Image
+ <Image
             src="/images/banners/chef.jpg"
             alt="promo img"
             className="absolute bottom-0 right-4  -z-1 whomade"
             width={274}
             height={350}
           />
+          </div>
+
+         
         </div>
  
       </div>
