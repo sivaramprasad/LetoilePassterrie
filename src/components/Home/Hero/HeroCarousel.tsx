@@ -50,7 +50,7 @@ const HeroCarousal = () => {
               
               {/* H1 */}
               <h1
-                className={`font-semibold text-dark text-xl sm:text-3xl mb-3 whittext fn-text transition-all duration-[1200000ms] ease-out ${
+                className={`font-semibold text-dark text-xl sm:text-3xl mb-3 whittext fn-text transition-all duration-[1200ms] ease-out ${
                   animate && activeIndex === idx ? "opacity-100 translate-y-0" : "opacity-0 translate-y-12"
                 }`}
               >
