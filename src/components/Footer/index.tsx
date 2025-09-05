@@ -12,7 +12,7 @@ const Footer = () => {
           <div className="max-w-[330px] w-full">
             <h2 className="mb-7.5 text-custom-1 font-medium text-dark">
              <Image
-                            src="/images/banners/logo.jpeg"
+                            src="/images/banners/Letoile-Logo.png"
                             alt="Logo"
                             width={219}
                             height={36}

@@ -68,7 +68,7 @@ export default function SliderSection() {
             >
               <img
                 src={src}
-                alt={`Portfolio Rs.{idx}`}
+                alt={`Portfolio ${idx}`}
                 className="w-full h-full object-cover block"
               />
               {/* Zoom Icon (hover only) */}
@@ -101,7 +101,7 @@ export default function SliderSection() {
           {/* Fullscreen Image */}
           <img
             src={images[selectedIndex]}
-            alt={`Full size Rs.{selectedIndex}`}
+            alt={`Full size ${selectedIndex}`}
             className="max-h-screen max-w-screen object-contain rounded shadow-2xl"
           />
 

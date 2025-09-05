@@ -74,7 +74,7 @@ const Checkout = () => {
                         <p className="text-dark">iPhone 14 Plus , 6/128GB</p>
                       </div>
                       <div>
-                        <p className="text-dark text-right">Rs.899.00</p>
+                        <p className="text-dark text-right">$899.00</p>
                       </div>
                     </div>
 
@@ -84,7 +84,7 @@ const Checkout = () => {
                         <p className="text-dark">Asus RT Dual Band Router</p>
                       </div>
                       <div>
-                        <p className="text-dark text-right">Rs.129.00</p>
+                        <p className="text-dark text-right">$129.00</p>
                       </div>
                     </div>
 
@@ -104,7 +104,7 @@ const Checkout = () => {
                         <p className="text-dark">Shipping Fee</p>
                       </div>
                       <div>
-                        <p className="text-dark text-right">Rs.15.00</p>
+                        <p className="text-dark text-right">$15.00</p>
                       </div>
                     </div>
 

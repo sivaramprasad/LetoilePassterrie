@@ -6,7 +6,8 @@ import PromoBanner from "./PromoBanner";
 import BestSeller from "./BestSeller";
 import CounDown from "./Countdown";
 import Gallery from "./SliderGallery";
-import Gallerys from "./SliderGallery2"
+import Gallerys from "./SliderGallery2";
+import ItemPage from "../Home/ItemPage";
 import Testimonials from "./Testimonials";
 import Newsletter from "../Common/Newsletter";
 
@@ -20,6 +21,7 @@ const Home = () => {
        <Categories />    
       <CounDown />
       <Gallery/>
+    
       <Gallerys/>
       {/* <Testimonials />
       <Newsletter /> */}

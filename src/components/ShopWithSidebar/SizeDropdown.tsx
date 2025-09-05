@@ -7,7 +7,7 @@ const SizeDropdown = () => {
     <div className="bg-white shadow-1 rounded-lg">
       <div
         onClick={() => setToggleDropdown(!toggleDropdown)}
-        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 Rs.{
+        className={`cursor-pointer flex items-center justify-between py-3 pl-6 pr-5.5 ${
           toggleDropdown && "shadow-filter"
         }`}
       >
@@ -15,7 +15,7 @@ const SizeDropdown = () => {
         <button
           onClick={() => setToggleDropdown(!toggleDropdown)}
           aria-label="button for size dropdown"
-          className={`text-dark ease-out duration-200 Rs.{
+          className={`text-dark ease-out duration-200 ${
             toggleDropdown && "rotate-180"
           }`}
         >
@@ -39,7 +39,7 @@ const SizeDropdown = () => {
 
       {/* // <!-- dropdown menu --> */}
       <div
-        className={`flex-wrap gap-2.5 p-6 Rs.{
+        className={`flex-wrap gap-2.5 p-6 ${
           toggleDropdown ? "flex" : "hidden"
         }`}
       >

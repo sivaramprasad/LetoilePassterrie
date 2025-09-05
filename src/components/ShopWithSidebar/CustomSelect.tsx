@@ -37,19 +37,19 @@ const CustomSelect = ({ options }) => {
       ref={selectRef}
     >
       <div
-        className={`select-selected whitespace-nowrap Rs.{
+        className={`select-selected whitespace-nowrap ${
           isOpen ? "select-arrow-active" : ""
         }`}
         onClick={toggleDropdown}
       >
         {selectedOption.label}
       </div>
-      <div className={`select-items Rs.{isOpen ? "" : "select-hide"}`}>
+      <div className={`select-items ${isOpen ? "" : "select-hide"}`}>
         {options.slice(1).map((option, index) => (
           <div
             key={index}
             onClick={() => handleOptionClick(option)}
-            className={`select-item Rs.{
+            className={`select-item ${
               selectedOption === option ? "same-as-selected" : ""
             }`}
           >

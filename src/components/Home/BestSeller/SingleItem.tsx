@@ -52,10 +52,6 @@ const SingleItem = ({ item }: { item: Product }) => {
             <Link href="/"> {item.title} </Link>
           </h3>
 
-          <span className="flex items-center justify-center gap-2 font-medium text-lg">
-            <span className="">RS{item.discountedPrice}</span>
-            {/* <span className="text-dark-4 line-through">RS{item.price}</span> */}
-          </span>
         </div>
 
         <div className="absolute right-0 bottom-0 translate-x-full u-w-full flex flex-col gap-2 p-5.5 ease-linear duration-300 group-hover:translate-x-0">
