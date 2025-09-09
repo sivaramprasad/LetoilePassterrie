@@ -14,9 +14,9 @@ import { addItemToCart } from "@/redux/features/cart-slice";
 const Categories = ({ item }) => {
    const dispatch = useDispatch<AppDispatch>();
 
-   const handleRemoveFromCart = () => {
-     dispatch(removeItemFromCart(item));
-   };
+  const handleRemoveFromCart = () => {
+  dispatch(removeItemFromCart(item.id));
+}
 
   const handleAddToCart = () => {
     dispatch(
