@@ -210,16 +210,17 @@ input[type='search']::-webkit-search-results-decoration {
     background-repeat: no-repeat;
     background-size: cover;
 }
-.bg-whites2{
-  background-image: url("../../../public/images/banners/bannerlight.jpg");
-    height: 630px;
-    width: 100%;
-    object-fit: contain;
-    object-position: center;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
+.bg-whites2 {
+  background-image: 
+    url("../../../public/images/banners/bannerst2.jpg"),
+    url("../../../public/images/banners/bannerlight.jpg");
+  height: 630px;
+  width: 100%;
+  background-position: center, center;  /* first for 1st image, second for 2nd */
+  background-repeat: no-repeat, no-repeat;
+  background-size: cover, contain;      /* adjust sizes independently */
 }
+
 .bg-dark {
     --tw-bg-opacity: 1;
      background-color: #FFF5E1;
@@ -243,6 +244,21 @@ input[type='search']::-webkit-search-results-decoration {
  
 }
 @media (max-width: 768px) {
+  .ttlw{
+    width:98% !important;
+    margin: 0px auto;
+}
+  .prodprw{
+      width: 100%;
+      height:800px;
+      overflow: hidden;
+}
+.prodtext{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 0rem !important;
+}
     .mp-image-block {
     width: 100% !important;
 }
@@ -429,6 +445,17 @@ img {
     width: 100%;
     height: 65%;
 }
+.prodprw{
+      width: 100%;
+      height:800px;
+      overflow: hidden;
+}
+.prodtext{
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    margin-top: 7rem;
+}
 .bg-btn{
   width: 60px;
   margin-top: -20px;
@@ -463,7 +490,10 @@ img {
   width:auto
 }
 .b-st1{
- 
   border-radius: 10px;
-  width:300px
+  width:260px;
+}
+.ttlw{
+ width:80%;
+ margin: 0px auto;
 }

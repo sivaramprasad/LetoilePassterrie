@@ -13,18 +13,18 @@ const ShopWithSidebar = () => {
   const [productStyle, setProductStyle] = useState("grid");
   const [productSidebar, setProductSidebar] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
-  const [cart, setCart] = useState<{ [key: string]: number }>({});
+  const [cart, setCart] = useState<{ [key: number]: number }>({});
 
   const handleStickyMenu = () => {
     setStickyMenu(window.scrollY >= 80);
   };
 
   // cart handlers
-  const addToCart = (id: string) => {
+  const addToCart = (id: number) => {
     setCart((prev) => ({ ...prev, [id]: (prev[id] || 0) + 1 }));
   };
 
-  const removeFromCart = (id: string) => {
+  const removeFromCart = (id: number) => {
     setCart((prev) => {
       const qty = (prev[id] || 0) - 1;
       if (qty <= 0) {
@@ -355,35 +355,36 @@ const ShopWithSidebar = () => {
           
 
           
-          {cart[item.id] ? (
-            <div className="flex items-center justify-center gap-2 mt-2">
-              <button
-                onClick={() => removeFromCart(item.title)}
-                className="px-2 py-1 bg-gray-200 rounded"
-              >
-                -
-              </button>
-              <input
-                type="text"
-                value={cart[item.title]}
-                readOnly
-                className="w-10 text-center border rounded"
-              />
-              <button
-                onClick={() => addToCart(item.title)}
-                className="px-2 py-1 bg-gray-200 rounded"
-              >
-                +
-              </button>
-            </div>
-          ) : (
-            <button
-              onClick={() => addToCart(item.title)}
-              className="btn-add btn mt-2 bg-blue py-1 rounded shadow-sm bg-btn"
-            >
-              Add
-            </button>
-          )}
+        {cart[item.id] ? (
+  <div className="flex items-center justify-center gap-2 mt-2">
+    <button
+      onClick={() => removeFromCart(item.id)}
+      className="px-2 py-1 bg-gray-200 rounded"
+    >
+      -
+    </button>
+    <input
+      type="text"
+      value={cart[item.id]}
+      readOnly
+      className="w-10 text-center border rounded"
+    />
+    <button
+      onClick={() => addToCart(item.id)}
+      className="px-2 py-1 bg-gray-200 rounded"
+    >
+      +
+    </button>
+  </div>
+) : (
+  <button
+    onClick={() => addToCart(item.id)}
+    className="btn-add btn mt-2 bg-blue py-1 rounded shadow-sm bg-btn"
+  >
+    Add
+  </button>
+)}
+
           <h3 className="font-medium text-gray-800 text-center truncate">
             {item.title}
           </h3>
@@ -435,35 +436,36 @@ const ShopWithSidebar = () => {
             className="menuimg prodimg mx-auto rounded"
           />
 
-          {cart[p.id] ? (
-            <div className="flex items-center justify-center gap-2 mt-2">
-              <button
-                onClick={() => removeFromCart(p.title)}
-                className="px-2 py-1 bg-gray-200 rounded"
-              >
-                -
-              </button>
-              <input
-                type="text"
-                value={cart[p.title]}
-                readOnly
-                className="w-10 text-center border rounded"
-              />
-              <button
-                onClick={() => addToCart(p.title)}
-                className="px-2 py-1 bg-gray-200 rounded"
-              >
-                +
-              </button>
-            </div>
-          ) : (
-            <button
-              onClick={() => addToCart(p.title)}
-              className="btn-add btn mt-2 bg-blue py-1 rounded shadow-sm bg-btn"
-            >
-              Add
-            </button>
-          )}
+        {cart[p.id] ? (
+  <div className="flex items-center justify-center gap-2 mt-2">
+    <button
+      onClick={() => removeFromCart(p.id)}
+      className="px-2 py-1 bg-gray-200 rounded"
+    >
+      -
+    </button>
+    <input
+      type="text"
+      value={cart[p.id]}
+      readOnly
+      className="w-10 text-center border rounded"
+    />
+    <button
+      onClick={() => addToCart(p.id)}
+      className="px-2 py-1 bg-gray-200 rounded"
+    >
+      +
+    </button>
+  </div>
+) : (
+  <button
+    onClick={() => addToCart(p.id)}
+    className="btn-add btn mt-2 bg-blue py-1 rounded shadow-sm bg-btn"
+  >
+    Add
+  </button>
+)}
+
         </div>
         
       </div>

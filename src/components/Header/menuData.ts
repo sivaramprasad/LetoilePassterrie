@@ -11,7 +11,7 @@ export const menuData: Menu[] = [
     id: 2,
     title: "Cakes",
     newTab: false,
-    path: "/",
+    path: "/shop-with-sidebar/",
   },
   {
     id: 3,
@@ -23,7 +23,7 @@ export const menuData: Menu[] = [
     id: 6,
     title: "Menu",
     newTab: false,
-    path: "/",
+    path: "/item-page/",
     
   },
   // {

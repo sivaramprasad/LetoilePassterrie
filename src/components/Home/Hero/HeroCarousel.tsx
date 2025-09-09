@@ -32,7 +32,7 @@ const HeroCarousal = () => {
 
   return (
     <Swiper
-      spaceBetween={30}
+      spaceBetween={0}
       centeredSlides={true}
       autoplay={{
         delay: 3500,

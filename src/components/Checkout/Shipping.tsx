@@ -11,7 +11,7 @@ const Shipping = () => {
       >
         Ship to a different address?
         <svg
-          className={`fill-current ease-out duration-200 Rs.{
+          className={`fill-current ease-out duration-200 ${
             dropdown && "rotate-180"
           }`}
           width="22"
@@ -30,7 +30,7 @@ const Shipping = () => {
       </div>
 
       {/* <!-- dropdown menu --> */}
-      <div className={`p-4 sm:p-8.5 Rs.{dropdown ? "block" : "hidden"}`}>
+      <div className={`p-4 sm:p-8.5 ${dropdown ? "block" : "hidden"}`}>
         <div className="mb-5">
           <label htmlFor="countryName" className="block mb-2.5">
             Country/ Region

@@ -34,7 +34,7 @@ const SingleOrder = ({ orderItem, smallView }: any) => {
 
           <div className="min-w-[128px]">
             <p
-              className={`inline-block text-custom-sm  py-0.5 px-2.5 rounded-[30px] capitalize Rs.{
+              className={`inline-block text-custom-sm  py-0.5 px-2.5 rounded-[30px] capitalize ${
                 orderItem.status === "delivered"
                   ? "text-green bg-green-light-6"
                   : orderItem.status === "on-hold"
@@ -85,7 +85,7 @@ const SingleOrder = ({ orderItem, smallView }: any) => {
               <p className="text-custom-sm text-dark">
                 <span className="font-bold pr-2">Status:</span>{" "}
                 <span
-                  className={`inline-block text-custom-sm  py-0.5 px-2.5 rounded-[30px] capitalize Rs.{
+                  className={`inline-block text-custom-sm  py-0.5 px-2.5 rounded-[30px] capitalize ${
                     orderItem.status === "delivered"
                       ? "text-green bg-green-light-6"
                       : orderItem.status === "on-hold"
@@ -108,7 +108,7 @@ const SingleOrder = ({ orderItem, smallView }: any) => {
 
             <div className="">
               <p className="text-custom-sm text-dark">
-                <span className="font-bold pr-2">Total:</span> Rs.
+                <span className="font-bold pr-2">Total:</span> $
                 {orderItem.total}
               </p>
             </div>
