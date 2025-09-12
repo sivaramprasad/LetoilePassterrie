@@ -1,12 +1,7 @@
 import { Menu } from "@/types/Menu";
 
 export const menuData: Menu[] = [
-  // {
-  //   id: 1,
-  //   title: "Popular",
-  //   newTab: false,
-  //   path: "/",
-  // },
+ 
   {
     id: 2,
     title: "Cakes",
@@ -24,7 +19,12 @@ export const menuData: Menu[] = [
     title: "Menu",
     newTab: false,
     path: "/item-page/",
-    
+  },
+   {
+    id: 1,
+    title: "Contact",
+    newTab: false,
+    path: "/contact/",
   },
   // {
   //   id: 7,

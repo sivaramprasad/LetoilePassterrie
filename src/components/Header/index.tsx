@@ -53,7 +53,7 @@ const Header = () => {
         stickyMenu && "shadow"
       }`}
     >
-      <div className="max-w-[1170px] mx-auto px-4 sm:px-7.5 xl:px-0">
+      <div className="max-w-[1275px] mx-auto px-4 sm:px-7.5 xl:px-0">
         {/* <!-- header top start --> */}
         <div
           className={`flex flex-col lg:flex-row gap-5 items-end lg:items-center xl:justify-between ease-out duration-200 ${
@@ -118,7 +118,7 @@ const Header = () => {
             >
               {/* <!-- Main Nav Start --> */}
               <nav>
-                <ul className="flex xl:items-center flex-col xl:flex-row gap-5 xl:gap-6">
+                <ul className="flex xl:items-center flex-col xl:flex-row gap-8 xl:gap-6">
                   {menuData.map((menuItem, i) =>
                     menuItem.submenu ? (
                       <Dropdown
@@ -153,7 +153,7 @@ const Header = () => {
 
                   <div className="relative  w-full">
                     {/* <!-- divider --> */}
-                    <span className="absolute left-0 top-1/2 -translate-y-1/2 inline-block w-px h-5.5 bg-gray-4"></span>
+                    <span className="absolute left-0 inset-y-0 w-px bg-gray-4"></span>
                     <input
                       onChange={(e) => setSearchQuery(e.target.value)}
                       value={searchQuery}

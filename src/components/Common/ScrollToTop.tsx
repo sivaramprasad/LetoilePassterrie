@@ -33,12 +33,12 @@ export default function ScrollToTop() {
       {isVisible && (
         <button
           onClick={scrollToTop}
-          className={`items-center justify-center w-10 h-10 rounded-[4px] shadow-lg bgred ease-out duration-200 hover:bg-blue-dark fixed bottom-8 right-8 z-999 ${
+          className={`items-center justify-center w-10 h-10 rounded-[4px] shadow-lg border bg-dark ease-out duration-200 hover:bg-dark fixed bottom-8 right-8 z-999 ${
             isVisible ? "flex" : "hidden"
           }`}
         >
           <svg
-            className="fill-white w-5 h-5"
+            className="fill-black w-5 h-5"
             xmlns="http://www.w3.org/2000/svg"
             viewBox="0 0 512 512"
           >

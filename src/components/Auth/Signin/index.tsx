@@ -49,7 +49,7 @@ const Signin = () => {
 
                 <button
                   type="submit"
-                  className="w-full flex justify-center font-medium text-white bgred py-3 px-6 rounded-lg ease-out duration-200  mt-7.5 "
+                  className="w-full flex justify-center font-medium text-dark border bg-dark py-3 px-6 rounded-lg ease-out duration-200  mt-7.5 "
                 >
                   Sign in to account
                 </button>

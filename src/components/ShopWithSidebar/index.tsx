@@ -7,6 +7,7 @@ import cakesMenuData from "../Shop/cakesMenuData";
 import SingleGridItem from "../Shop/SingleGridItem";
 import SingleListItem from "../Shop/SingleListItem";
 import { desserts }  from "../Shop/cakesMenuData";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
 
 
 const ShopWithSidebar = () => {
@@ -14,6 +15,7 @@ const ShopWithSidebar = () => {
   const [productSidebar, setProductSidebar] = useState(false);
   const [stickyMenu, setStickyMenu] = useState(false);
   const [cart, setCart] = useState<{ [key: number]: number }>({});
+const [favourites, setFavourites] = useState<number[]>([]);
 
   const handleStickyMenu = () => {
     setStickyMenu(window.scrollY >= 80);
@@ -342,12 +344,37 @@ const ShopWithSidebar = () => {
         className="bg-white rounded shadow-sm flex flex-col justify-between h-[320px] w-full"
       >
         {/* Image Box */}
-        <div className="w-full h-[200px] flex items-center justify-center overflow-hidden rounded-t">
+        <div className="relative inline-block w-full h-[200px]">
+          <button
+    onClick={() =>
+      setFavourites((prev) =>
+        prev.includes(item.id)
+          ? prev.filter((fid) => fid !== item.id)
+          : [...prev, item.id]
+      )
+    }
+    className="right-2 bg-white rounded-full p-2 shadow-md hover:scale-110 transition btnwsh"
+  >
+    {favourites.includes(item.id) ? (
+     <FaHeart
+      size={20}
+      style={{ color: "#ef4444", fill: "#ef4444", stroke: "#ef4444" }}
+    />
+  ) : (
+    // outlined heart — force stroke color (no fill)
+    <FaRegHeart
+      size={20}
+      style={{ color: "#ef4444", fill: "#ef4444", stroke: "#ef4444" }}
+    />
+    )}
+  </button>
+  
           <img
             src={item.imgs?.previews?.[0] || "/placeholder.png"}
             alt={item.title}
             className="w-full h-full object-cover"
           />
+            {/* Favourite Icon */}
         </div>
 
         {/* Info + Price + Add Button */}
@@ -379,13 +406,13 @@ const ShopWithSidebar = () => {
 ) : (
   <button
     onClick={() => addToCart(item.id)}
-    className="btn-add btn mt-2 bg-blue py-1 rounded shadow-sm bg-btn"
+    className="absolute btn-add btn mt-2 bg-blue py-1 rounded shadow-sm bg-btn"
   >
     Add
   </button>
 )}
 
-          <h3 className="font-medium text-gray-800 text-center truncate">
+          <h3 className="mt-5 font-medium text-gray-800 text-center truncate">
             {item.title}
           </h3>
           <p className="font-semibold">₹{item.price}</p>
@@ -427,7 +454,31 @@ const ShopWithSidebar = () => {
         </div>
 
         {/* Right Image + Cart Buttons */}
-        <div className="w-[150px] h-[150px] text-center">
+        <div className="relative inline-block w-[150px] h-[150px] text-center">
+          <button
+    onClick={() =>
+      setFavourites((prev) =>
+        prev.includes(p.id)
+          ? prev.filter((fid) => fid !== p.id)
+          : [...prev, p.id]
+      )
+    }
+    className="right-2 bg-white rounded-full p-2 shadow-md hover:scale-110 transition btnwsh"
+  >
+  {favourites.includes(p.id) ? (
+    // filled heart — force color/fill/stroke
+    <FaHeart
+      size={20}
+      style={{ color: "#ef4444", fill: "#ef4444", stroke: "#ef4444" }}
+    />
+  ) : (
+    // outlined heart — force stroke color (no fill)
+    <FaRegHeart
+      size={20}
+      style={{ color: "#ef4444", fill: "#ef4444", stroke: "#ef4444" }}
+    />
+  )}
+  </button>
           <Image
             src={p.imgs.previews[0]}
             alt={p.title}

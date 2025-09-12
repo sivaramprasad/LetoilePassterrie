@@ -33,7 +33,7 @@ const Contact = () => {
                         fill="#3C50E0"
                       />
                     </svg>
-                    Name: 
+                    Name: <b>Letoile</b>
                   </p>
 
                   <p className="flex items-center gap-4">
@@ -61,7 +61,7 @@ const Contact = () => {
                         fill="#3C50E0"
                       />
                     </svg>
-                    Phone: 
+                    Phone: 0000000000
                   </p>
 
                   <p className="flex gap-4">
@@ -80,7 +80,7 @@ const Contact = () => {
                         fill="#3C50E0"
                       />
                     </svg>
-                    Address: 
+                    Address: #Test
                   </p>
                 </div>
               </div>
@@ -120,15 +120,15 @@ const Contact = () => {
 
                 <div className="flex flex-col lg:flex-row gap-5 sm:gap-8 mb-5">
                   <div className="w-full">
-                    <label htmlFor="subject" className="block mb-2.5">
-                      Subject
+                    <label htmlFor="email" className="block mb-2.5">
+                      Email
                     </label>
 
                     <input
                       type="text"
-                      name="subject"
-                      id="subject"
-                      placeholder="Type your subject"
+                      name="email"
+                      id="email"
+                      placeholder=""
                       className="rounded-md border border-gray-3 bg-gray-1 placeholder:text-dark-5 w-full py-2.5 px-5 outline-none duration-200 focus:border-transparent focus:shadow-input focus:ring-2 focus:ring-blue/20"
                     />
                   </div>
@@ -164,7 +164,7 @@ const Contact = () => {
 
                 <button
                   type="submit"
-                  className="inline-flex font-medium text-white bgred py-3 px-7 rounded-md ease-out duration-200"
+                  className="inline-flex font-medium text-dark border bg-dark py-3 px-7 rounded-md ease-out duration-200"
                 >
                   Send Message
                 </button>

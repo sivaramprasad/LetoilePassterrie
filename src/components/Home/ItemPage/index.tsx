@@ -1,22 +1,25 @@
 "use client";
-import React, { useState } from "react";
-import "swiper/css";
-import "swiper/css/navigation";
+import React, { useState,useEffect } from "react";
 import Image from "next/image";
 import RelatedItemPage from "@/components/Home/ItemPage/related";
-import { AppDispatch } from "@/redux/store";
+import { AppDispatch, useAppSelector } from "@/redux/store";
 import { useDispatch } from "react-redux";
-import { addItemToCart } from "@/redux/features/cart-slice";
- import {
-  removeItemFromCart,
-} from "@/redux/features/cart-slice";
+import { addItemToCart, removeItemFromCart } from "@/redux/features/cart-slice";
+import { FaHeart, FaRegHeart } from "react-icons/fa";
+
+import {
+  addItemToWishlist,
+  removeItemFromWishlist,
+} from "@/redux/features/wishlist-slice";
 
 const Categories = ({ item }) => {
-   const dispatch = useDispatch<AppDispatch>();
+  const dispatch = useDispatch<AppDispatch>();
+  const wishlist = useAppSelector((state) => state.wishlistReducer.items);
+const [favourites, setFavourites] = useState<number[]>([]);
 
   const handleRemoveFromCart = () => {
-  dispatch(removeItemFromCart(item.id));
-}
+    dispatch(removeItemFromCart(item.id));
+  };
 
   const handleAddToCart = () => {
     dispatch(
@@ -26,6 +29,27 @@ const Categories = ({ item }) => {
       })
     );
   };
+
+  const handleItemToWishList = () => {
+    const payload = {
+      id: item.id,
+      title: item.title,
+      price: item.price,
+      discountedPrice: item.discountedPrice ?? item.price,
+      quantity: 1,
+      status: "available",
+      imgs: item.imgs,
+    };
+
+    console.log("Adding to wishlist:", payload);
+    dispatch(addItemToWishlist(payload));
+  };
+
+  // Debug: log whenever wishlist changes
+  useEffect(() => {
+    console.log("Wishlist updated:", wishlist);
+  }, [wishlist]);
+
   return (
     <>
       <section className="mt-10rem ttlw overflow-hidden">
@@ -36,7 +60,30 @@ const Categories = ({ item }) => {
 
        
     </div>
-            <div className="px-0 md:px-3 pr-0 md:pr-10 mb-5 md:mb-0 flex items-center justify-center">
+            <div className="relatiive px-0 md:px-3 pr-0 md:pr-10 mb-5 md:mb-0 inline-block">
+               <button
+                  onClick={() =>
+                    setFavourites((prev) =>
+                      prev.includes(item.id)
+                        ? prev.filter((fid) => fid !== item.id)
+                        : [...prev, item.id]
+                    )
+                  }
+                  className="right-2 bg-white rounded-full p-2 shadow-md hover:scale-110 transition bwsh1 btnwsh"
+                >
+                  {favourites.includes(item.id) ? (
+                   <FaHeart
+                    size={20}
+                    style={{ color: "#ef4444", fill: "#ef4444", stroke: "#ef4444" }}
+                  />
+                ) : (
+                  // outlined heart — force stroke color (no fill)
+                  <FaRegHeart
+                    size={20}
+                    style={{ color: "#ef4444", fill: "#ef4444", stroke: "#ef4444" }}
+                  />
+                  )}
+                </button>
   <Image
     src="/images/banners/itempageimg.jpg"
     alt="item-image"
@@ -134,6 +181,7 @@ const Categories = ({ item }) => {
             />
           </svg>
         </button>
+    
       </div>
   </div>
 </div>

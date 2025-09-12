@@ -133,7 +133,7 @@ export const desserts = [
    {
     title: "Pistachio pannacotta",
     price: 325,
-    id: 6,
+    id: 20,
     imgs: {
       thumbnails: [
         "/images/products/product-6-sm-1.png",
@@ -147,7 +147,7 @@ export const desserts = [
    {
     title: "Pumpkin pie in a jar",
     price: 325,
-    id: 6,
+    id: 21,
     imgs: {
       thumbnails: [
         "/images/products/product-6-sm-1.png",
@@ -161,7 +161,7 @@ export const desserts = [
    {
     title: "Strawberry cheesecake",
     price: 325,
-    id: 6,
+    id: 23,
     imgs: {
       thumbnails: [
         "/images/products/product-6-sm-1.png",
@@ -175,7 +175,7 @@ export const desserts = [
    {
     title: "Coffee cake",
     price: 325,
-    id: 6,
+    id: 24,
     imgs: {
       thumbnails: [
         "/images/products/product-6-sm-1.png",

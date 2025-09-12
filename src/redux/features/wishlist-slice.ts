@@ -8,7 +8,7 @@ type WishListItem = {
   id: number;
   title: string;
   price: number;
-  discountedPrice: number;
+  discountedPrice?: number;
   quantity: number;
   status?: string;
   imgs?: {
@@ -45,10 +45,8 @@ export const wishlist = createSlice({
       }
     },
     removeItemFromWishlist: (state, action: PayloadAction<number>) => {
-      const itemId = action.payload;
-      state.items = state.items.filter((item) => item.id !== itemId);
+      state.items = state.items.filter((item) => item.id !== action.payload);
     },
-
     removeAllItemsFromWishlist: (state) => {
       state.items = [];
     },
@@ -60,4 +58,5 @@ export const {
   removeItemFromWishlist,
   removeAllItemsFromWishlist,
 } = wishlist.actions;
+
 export default wishlist.reducer;

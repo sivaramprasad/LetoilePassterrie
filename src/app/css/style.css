@@ -244,6 +244,12 @@ input[type='search']::-webkit-search-results-decoration {
  
 }
 @media (max-width: 768px) {
+  .bwsh1{
+    position: absolute;
+    display: inline-block;
+    margin-top: 8rem;
+    right: 1rem !important;
+}
   .ttlw{
     width:98% !important;
     margin: 0px auto;
@@ -319,6 +325,10 @@ border:1px solidgray;
   height: auto;
   margin: 0px auto;
   margin-bottom: 20px;
+}
+.delightimg{
+  margin-top: 40px;
+  margin-bottom: 40px;
 }
 .whittext a {
   color: #fff;
@@ -496,4 +506,18 @@ img {
 .ttlw{
  width:80%;
  margin: 0px auto;
+}
+.btnwsh{
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    position: absolute;
+    padding: 10px;
+    margin-top: 4px;
+}
+.bwsh1{
+    position: absolute;
+    display: inline-block;
+    margin-top: 8rem;
+    right: 40rem;
 }
