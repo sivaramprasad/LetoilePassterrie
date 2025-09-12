@@ -143,13 +143,13 @@ export default function Categories() {
         }}
       > 
         {products.map((slide) => (
-          <SwiperSlide key={slide.id} className="p-2">
+          <SwiperSlide key={slide.id} className="padright">
             <div className="flex flex-col items-center text-center bg-white rounded-lg">
               <div className="w-full h-[300px] overflow-hidden rounded">
                 <img
                   src={slide.imgs?.previews?.[0] ?? "/placeholder.png"}
                   alt={slide.title}
-                  className="w-full h-full object-cover p-5"
+                  className="w-full h-full object-cover"
                 />
               </div>
 

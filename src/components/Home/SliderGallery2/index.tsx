@@ -80,7 +80,7 @@ export default function SliderSection() {
 
       {/* Fullscreen Overlay */}
       {selectedIndex !== null && (
-        <div className="fixed inset-0 z-[9999] bg-dark/95 backdrop-blur-lg flex items-center justify-center">
+        <div className="fixed inset-0 z-[9999] backdrop-blur-lg flex items-center justify-center" style={{ backgroundColor: 'rgba(28, 39, 76, 0.09)' }}>
           {/* Close Button */}
           <button
             aria-label="Close (Esc)"

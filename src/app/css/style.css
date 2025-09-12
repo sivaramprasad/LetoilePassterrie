@@ -521,3 +521,6 @@ img {
     margin-top: 8rem;
     right: 40rem;
 }
+.padright{
+  padding-right: 10px !important;
+}
