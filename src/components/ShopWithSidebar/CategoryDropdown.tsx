@@ -33,7 +33,6 @@ const CategoryDropdown = ({ categories }) => {
 
   return (
     <div className="bg-white shadow-1 rounded-lg padding-20">
-       <h1 className="font-semibold text-dark text-xl sm:text-2xl xl:text-custom-2">Cakes</h1>
        <div>
          
       {categories.map((category, index) => (

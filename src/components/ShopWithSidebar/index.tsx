@@ -37,227 +37,105 @@ const [favourites, setFavourites] = useState<number[]>([]);
     });
   };
 
- const categories = [
-    {
-      name: "Blue berries bake cheesecake",
-      isRefined: true,
-    },
-    {
-      name: "Banoffee pie",
-      isRefined: false,
-    },
-    {
-      name: "Hazelnut mousse cake",
-      isRefined: false,
-    },
-    {
-      name: "Olive oil brownie",
-      isRefined: false,
-    },
-    {
-      name: "Classic tiramisu",
-      isRefined: false,
-    },
-    {
-      name: "Pecan nut fudge",
-      isRefined: false,
-    },
-    {
-      name: "Sticky date pudding with toffee sauce",
-      isRefined: false,
-    },
-    {
-      name: "Milk chocolate cake",
-      isRefined: false,
-    },
-    {
-      name: "Opera",
-      isRefined: false,
-    },
-     {
-      heading:"Sugar free dessert",
-    },
-{
-      name: "Pistachio pannacotta ",
-      isRefined: false,
-    },
-    {
-      name: "Pumpkin pie in a jar",
-      isRefined: false,
-    },
-    {
-      name: "Strawberry cheesecake",
-      isRefined: false,
-    },
-    {
-      name: "Coffee cake",
-      isRefined: false,
-    },
-    {
-      heading:"Gluten free dessert",
-    },
-{
-      name: "Almond orange cake",
-      isRefined: false,
-    },
-    {
-      name: "Pumpkin parfait",
-      isRefined: false,
-    },
-    {
-      name: "Poach pear in lavender syrup",
-      isRefined: false,
-    },
-    {
-      name: "Gluten free chocolate cake",
-      isRefined: false,
-    },
-    {
-      heading:"Breads",
-    },
-{
-      name: "Sourdough ",
-      isRefined: false,
-    },
-    {
-      name: "Focaccia",
-      isRefined: false,
-    },
-   
- {
-      heading:"French Bugatti",
-    },
-{
-      name: "Brioche",
-      isRefined: false,
-    },
-    {
-      name: "Multigrain",
-      isRefined: false,
-    },
-    {
-      heading:"Doughnuts box of 4",
-    },
-{
-      name: "Rich chocolate ",
-      isRefined: false,
-    },
-    {
-      name: "Milk chocolate",
-      isRefined: false,
-    },
-    {
-      name: "Biscoff white chocolate",
-      isRefined: false,
-    },
-    {
-      name: "Custard berliner",
-      isRefined: false,
-    },
-    {
-      name: "Strawberry berliner",
-      isRefined: false,
-    },
-     {
-      heading:"Macaroons box of 10",
-    },
-{
-      name: "Hazelnut",
-      isRefined: false,
-    },
-    {
-      name: "Pistachio",
-      isRefined: false,
-    },
-    {
-      name: "Bitter chocolate",
-      isRefined: false,
-    },
-    {
-      name: "Biscoff",
-      isRefined: false,
-    },
-    {
-      name: "Mango",
-      isRefined: false,
-    },
-    {
-      heading:"Cup cakes box of 4",
-    },
-{
-      name: "Rich chocolate",
-      isRefined: false,
-    },
-    {
-      name: "Salted caramel",
-      isRefined: false,
-    },
-    {
-      name: "Peanut butter",
-      isRefined: false,
-    },
-    {
-      name: "Red velvet",
-      isRefined: false,
-    },
-    {
-      name: "Blue berrie",
-      isRefined: false,
-    },
-    {
-      heading:"Cakes for 8 to 10 portions",
-    },
-{
-      name: "Hazelnut croquante",
-     
-      isRefined: false,
-    },
-    {
-      name: "Pistachio cake",
-      isRefined: false,
-    },
-    {
-      name: "Blue berry Vanilla",
-      isRefined: false,
-    },
-    {
-      name: "Strawberry vanilla",
-      isRefined: false,
-    },
-    {
-      name: "Milk chocolate layer cake",
-      isRefined: false,
-    },
-    {
-      name: "Fresh fruit bliss",
-      isRefined: false,
-    },
-    {
-      name: "Mango passion fruit cake",
-      isRefined: false,
-    },
-    {
-      name: "Lotus biscoff",
-      isRefined: false,
-    },
-     {
-      name: "Coconut matcha cake",
-      
-      isRefined: false,
-    },
-    {
-      name: "Red velvet cake",
-      isRefined: false,
-    },
-    {
-      name: "Bitter chocolate cake",
-      isRefined: false,
-    },
-     {
-      name: "Almond butter cream cake (gluten free) ",
-      isRefined: false,
-    },
-  ];
+const categories = [
+  {
+    heading: "Tea Cakes",
+  },
+  { name: "Coconut cake", isRefined: false },
+  { name: "Chocolate chip pound cake", isRefined: false },
+  { name: "Apple bread", isRefined: false },
+  { name: "Banana bread", isRefined: false },
+  { name: "Lemon loaf cake", isRefined: false },
+  { name: "Marble cake", isRefined: false },
+
+  {
+    heading: "Donuts",
+  },
+  { name: "Boston cream donut", isRefined: false },
+  { name: "Chocolate donut", isRefined: false },
+  { name: "Vanilla custard donut", isRefined: false },
+  { name: "Sugar donut", isRefined: false },
+  { name: "Cinnamon sugar donut", isRefined: false },
+  { name: "Salted caramel donut", isRefined: false },
+  { name: "Jelly donut", isRefined: false },
+  { name: "Cheesecake donut", isRefined: false },
+  { name: "Old fashioned donut", isRefined: false },
+
+  {
+    heading: "Cupcakes",
+  },
+  { name: "Chocolate cupcake", isRefined: false },
+  { name: "Vanilla cupcake", isRefined: false },
+  { name: "Red velvet cupcake", isRefined: false },
+  { name: "Salted caramel cupcake", isRefined: false },
+  { name: "Nutella cupcake", isRefined: false },
+  { name: "Cookies and cream cupcake", isRefined: false },
+  { name: "Biscoff cupcake", isRefined: false },
+  { name: "Ferrero Rocher cupcake", isRefined: false },
+  { name: "Strawberry cupcake", isRefined: false },
+
+  {
+    heading: "Cookies",
+  },
+  { name: "Milano cookies", isRefined: false },
+  { name: "Chocolate brownie cookies", isRefined: false },
+  { name: "Pecan pie cookies", isRefined: false },
+  { name: "Lemon coconut cookies", isRefined: false },
+  { name: "Thumbprint cookies", isRefined: false },
+  { name: "Coconut cookies", isRefined: false },
+  { name: "Black forest cookies", isRefined: false },
+  { name: "New York style cookies", isRefined: false },
+  { name: "Pistachio cookies", isRefined: false },
+
+  {
+    heading: "Cakes",
+  },
+  { name: "That Chocolate cake", isRefined: false },
+  { name: "Chocolate cake with feuilletine", isRefined: false },
+  { name: "Red Velvet", isRefined: false },
+  { name: "Vanilla cake", isRefined: false },
+  { name: "Black forest cake", isRefined: false },
+  { name: "Pina colada cake", isRefined: false },
+  { name: "Mango cake", isRefined: false },
+  { name: "Raspberry chocolate mousse cake", isRefined: false },
+  { name: "Strawberry Bavarian cream cake", isRefined: false },
+  { name: "Tiramisu cake", isRefined: false },
+  { name: "Chocolate passion fruit cake", isRefined: false },
+  { name: "Italian cream cake", isRefined: false },
+
+  {
+    heading: "Tarts",
+  },
+  { name: "Salted caramel chocolate", isRefined: false },
+  { name: "Strawberry tart", isRefined: false },
+  { name: "Mango lime tart", isRefined: false },
+  { name: "Orange and almond tart", isRefined: false },
+  { name: "Fresh fruit tart", isRefined: false },
+  { name: "Apple tart", isRefined: false },
+  { name: "Apricot blueberry tart", isRefined: false },
+  { name: "Danish pastry", isRefined: false },
+
+  {
+    heading: "Cheesecakes",
+  },
+  { name: "Florentine cheesecake", isRefined: false },
+  { name: "Strawberry cheesecake", isRefined: false },
+  { name: "Chocolate cheesecake", isRefined: false },
+  { name: "New York style cheesecake", isRefined: false },
+
+  {
+    heading: "Savouries",
+  },
+  { name: "Egg puff", isRefined: false },
+  { name: "Veg puff", isRefined: false },
+  { name: "Kheema puff", isRefined: false },
+  { name: "Chicken puff", isRefined: false },
+  { name: "Chicken 65 puff", isRefined: false },
+  { name: "Mama’s chicken 65", isRefined: false },
+  { name: "Chicken sandwich", isRefined: false },
+  { name: "Cucumber sandwich", isRefined: false },
+  { name: "Egg sandwich", isRefined: false },
+];
 
 
   useEffect(() => {

@@ -202,9 +202,7 @@ const Footer = () => {
           </div>
 
           <div className="w-full sm:w-auto">
-            <h2 className="mb-7.5 text-custom-1 font-medium text-dark">
-              Cakes
-            </h2>
+           
 
             <ul className="flex flex-col gap-3.5">
              
